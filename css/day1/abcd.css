@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  color: orange;
+  font-size: 30px;
+}
+
+article {
+  border: 2px solid orange;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+article button,
+button {
+  background-color: orange;
+  color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+header button {
+  background-color: orange;
+}
+
+/* Here we call "button" a selector */
+/* background-color: "orange" => css rule, style */
+/* color => this is css property */
+/* white, 10px => values */
+/* We separate/terminate each rule by ";"  */
+
+/* Internal CSS */
+
+/* If we make a separate .css file and place all those styles, then 
+this approch to apply style is called external style */
+/* External Style */

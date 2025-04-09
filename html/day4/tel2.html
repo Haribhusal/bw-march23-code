@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10-Digit Phone Number (HTML Only)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    input[type="tel"] {
+      padding: 5px;
+      font-size: 16px;
+      width: 200px;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-left: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Enter Your Phone Number</h2>
+  <form>
+    <label for="phoneNumber">Phone Number (10 digits):</label>
+    <input type="number" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" maxlength="10" minlength="10"
+      inputmode="kana-name" placeholder="1234567890" title="Please enter exactly 10 digits (0-9 only)" required>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>

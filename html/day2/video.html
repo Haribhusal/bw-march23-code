@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+
+
+  <video controls>
+    <source src="./assets/video/myvideo.mp4"/>
+  </video>
+
+
+
+
+  
+<script>
+// We are going to play sound by clicking the play audio button
+let buttonToClick = document.getElementById('myButton'); 
+let soundToPlay = document.getElementById('myAudio');
+let butttonToPause = document.getElementById("myButtonToPause")
+
+buttonToClick.addEventListener('click', ()=> {
+  soundToPlay.play();
+})
+
+  butttonToPause.addEventListener('click', () => {
+    soundToPlay.pause();
+  })
+
+
+</script>
+</body>
+</html>

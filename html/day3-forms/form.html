@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form onsubmit="handleSubmit(e)">
+    <input type="text" name="fname" placeholder="Enter your full name" />
+    <br />
+    <input type="email" name="email" placeholder="Enter your email">
+    <br />
+    <input type="password" name="password" placeholder="Enter your password">
+    <br />
+    <div>
+      <input type="radio" id="maleSelector" name="a"> <label for="maleSelector">Male</label> <br />
+      <input type="radio" id="fSelector" name="a"> <label for="fSelector">Female</label> <br />
+      <input type="radio" id="dont" name="a"> <label for="dont">Don't Specify Gender</label> <br />
+    </div>
+    <hr />
+
+
+    <div>
+      <input type="checkbox" id="cgame" name="game" /> <label for="cgame">I want to play Cricket</label> <br />
+      <input type="checkbox" id="football" name="game" /> <label for="football">I want to play Football</label> <br />
+      <input type="checkbox" id="basketball" name="game" /> <label for="basketball">I want to play Basketball</label>
+      <br />
+      <input type="checkbox" id="badminton" name="game" /> <label for="badminton">I want to play Badminton</label>
+      <br />
+    </div>
+
+    <hr />
+    <div>
+      <select name="country">
+        <option value="Nepal">Nepal</option>
+        <option value="India">India</option>
+        <option value="Bangaladesh">Bangaladesh</option>
+        <option value="China">China</option>
+      </select>
+    </div>
+
+    <hr />
+    <textarea placeholder="Enter your message" rows="3"></textarea>
+    <hr />
+
+    <!-- <button type="submit">Submit</button> -->
+    <input type="submit" value="Submit">
+
+  </form>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      console.log('Form is submitting...')
+    }
+  </script>
+
+</body>
+
+</html>

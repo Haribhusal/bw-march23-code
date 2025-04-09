@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      color: red;
+    }
+
+    header {
+      background-color: yellow;
+    }
+
+    img {
+      border: 10px solid red;
+    }
+
+    /* Element Selector */
+
+
+
+    /* descendent selector */
+    header div img {
+      border-color: orange;
+    }
+
+    header img {
+      border-color: green;
+    }
+
+    button {
+      background-color: aqua;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    header>button {
+      /* Direct Children */
+      background-color: palevioletred;
+    }
+  </style>
+</head>
+
+<body>
+  <button>Read More in body</button>
+
+  <header>
+    <h1>Hello ELEMENT Selector for Header</h1>
+    <button>Read More in Header</button>
+    <div>
+      <button>Read More in div of Header</button>
+
+      <img src="https://picsum.photos/100" alt="">
+    </div>
+    <button>Read More in Header</button>
+
+    <img src="https://picsum.photos/100" alt="">
+
+  </header>
+
+  <main>
+    <button>Read More in main</button>
+
+    <h1>Hello ELEMENT Selector</h1>
+    <img src="https://picsum.photos/100" alt="">
+  </main>
+
+  <footer>
+    <button>Read More in footer</button>
+
+    <h1>Hello ELEMENT Selector</h1>
+    <img src="https://picsum.photos/100" alt="">
+  </footer>
+
+</body>
+
+</html>

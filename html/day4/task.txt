@@ -1,0 +1,17 @@
+
+
+Make a registration form with HTML TABLE AND form
+
+Make following fields and apply validations:
+- Fist name
+- Last name
+- Email
+- Address
+- Mobile Number
+- Register as : a) Student b) Teacher c) Staff
+- Select Country
+- Date of Birth
+- Hobbies a) Swimming b) Painting  c) Coding  d) Photography e) Design
+- Gender
+- Profile Picture.
+

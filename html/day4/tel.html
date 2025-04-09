@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10-Digit Phone Number Input (Numbers Only)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    input[type="tel"] {
+      padding: 5px;
+      font-size: 16px;
+      width: 200px;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-left: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Enter Your Phone Number</h2>
+  <form id="phoneForm">
+    <label for="phoneNumber">Phone Number (10 digits):</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="10" minlength="10" placeholder="1234567890"
+      required>
+    <button type="submit">Submit</button>
+    <div id="error" class="error"></div>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    const phoneInput = document.getElementById('phoneNumber');
+    const form = document.getElementById('phoneForm');
+    const result = document.getElementById('result');
+    const error = document.getElementById('error');
+
+    // Prevent non-numeric input in real-time
+    phoneInput.addEventListener('input', function (event) {
+      // Replace any non-digit characters with an empty string
+      this.value = this.value.replace(/\D/g, '');
+    });
+
+    // Optional: Prevent pasting non-numeric characters
+    phoneInput.addEventListener('paste', function (event) {
+      const pastedText = (event.clipboardData || window.clipboardData).getData('text');
+      if (!/^\d*$/.test(pastedText)) {
+        event.preventDefault(); // Block paste if it contains non-digits
+      }
+    });
+
+    // Form submission handling
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form refresh
+      const phoneNumber = phoneInput.value;
+
+      if (phoneNumber.length === 10 && /^\d{10}$/.test(phoneNumber)) {
+        error.textContent = ''; // Clear any previous error
+        result.textContent = `Phone Number: ${phoneNumber}`;
+      } else {
+        error.textContent = 'Please enter exactly 10 digits.';
+        result.textContent = '';
+      }
+    });
+  </script>
+</body>
+
+</html>

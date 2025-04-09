@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Line Animation</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="myCanvas" width="400" height="200"></canvas>
+  <script>
+
+
+    // Get the canvas and context
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Starting position and length of the line
+    let x = 0; // Starting x-coordinate
+    const y = 100; // Fixed y-coordinate (middle of canvas)
+    const speed = 5; // How fast the line grows (pixels per frame)
+
+    // Animation function
+    function drawLine() {
+      // Clear the canvas for each frame
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Set line style
+      ctx.strokeStyle = 'blue';
+      ctx.lineWidth = 20;
+
+      // Draw the line
+      ctx.beginPath();
+      ctx.moveTo(0, y); // Start at left edge
+      ctx.lineTo(x, y); // End at current x position
+      ctx.stroke();
+
+      // Update x position
+      x += speed;
+
+      // Reset x to 0 if it reaches the canvas width (looping effect)
+      if (x > canvas.width) {
+        x = 0;
+      }
+
+      // Request the next animation frame
+      requestAnimationFrame(drawLine);
+    }
+
+    // Start the animation
+    drawLine();
+  </script>
+</body>
+
+</html>

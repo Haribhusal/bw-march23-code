@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+
+  <!-- <audio id="myAudio" src="./testAudio.mp3" controls></audio> -->
+
+  <audio controls>
+    <source src="./assets/audio/testAudio.mp3"/>
+  </audio>
+  <button id="myButton">Play Audio</button>
+  <button id="myButtonToPause">Pause Audio</button>
+
+
+
+  
+<script>
+// We are going to play sound by clicking the play audio button
+let buttonToClick = document.getElementById('myButton'); 
+let soundToPlay = document.getElementById('myAudio');
+let butttonToPause = document.getElementById("myButtonToPause")
+
+buttonToClick.addEventListener('click', ()=> {
+  soundToPlay.play();
+})
+
+  butttonToPause.addEventListener('click', () => {
+    soundToPlay.pause();
+  })
+
+
+</script>
+</body>
+</html>

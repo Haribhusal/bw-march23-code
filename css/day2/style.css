@@ -1,0 +1,8 @@
+.bgfixed {
+  height: 150px;
+  width: 100%;
+  background-color: red;
+  background-image: url("https://picsum.photos/200");
+  background-attachment: fixed;
+  margin-bottom: 30px;
+}
