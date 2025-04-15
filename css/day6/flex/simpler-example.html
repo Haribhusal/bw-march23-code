@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent {
+      display: flex;
+      /* gap: 20px; */
+      /* row-gap: 20px;
+      column-gap: 30px; */
+      /* flex-wrap: wrap; */
+      background-color: yellow;
+    }
+
+    .parent>div {
+      /* height: 100px; */
+      background-color: red;
+    }
+
+    .parent>div:nth-child(1) {
+      /* flex-grow: 1; */
+      flex-basis: 500px;
+      background-color: purple;
+      height: 200px;
+    }
+
+    .parent>div:nth-child(2) {
+      /* flex-grow: 1; */
+      width: 200px;
+    }
+
+    .parent>div:nth-child(3) {
+      /* flex-grow: 1; */
+      width: 200px;
+
+    }
+
+    .testbox {
+      background-color: orange;
+      width: 400px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="parent">
+    <div class="child">Hello</div>
+    <div class="child">Hello</div>
+    <div class="child">Hello</div>
+
+  </div>
+
+  <div class="testbox"></div>
+</body>
+
+</html>

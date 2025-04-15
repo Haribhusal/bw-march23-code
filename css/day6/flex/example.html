@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      background-color: #f0f0f0;
+      border: 2px solid #333;
+      width: 900px;
+      /* Fixed container width */
+      height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      font-size: 18px;
+      box-sizing: border-box;
+      border: 1px solid #000;
+    }
+
+    /* Example 1: Default behavior */
+    #item1 {
+      flex-basis: 200px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      background-color: #ff5555;
+    }
+
+    #item2 {
+      flex-basis: 200px;
+      flex-grow: 2;
+      flex-shrink: 1;
+      background-color: #55aa55;
+    }
+
+    #item3 {
+      flex-basis: 200px;
+      flex-grow: 1;
+      flex-shrink: 2;
+      background-color: #5555ff;
+    }
+
+    /* Example 2: Shrinking behavior with smaller container */
+    .container-shrink {
+      width: 300px;
+      /* Smaller width to force shrinking */
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Flexbox: flex-basis, flex-grow, flex-shrink</h1>
+
+  <h2>Example 1: Growing to fill space</h2>
+  <div class="container">
+    <div class="item" id="item1">Item 1<br>flex-basis: 200px<br>flex-grow: 1<br>flex-shrink: 1</div>
+    <div class="item" id="item2">Item 2<br>flex-basis: 200px<br>flex-grow: 2<br>flex-shrink: 1</div>
+    <div class="item" id="item3">Item 3<br>flex-basis: 200px<br>flex-grow: 1<br>flex-shrink: 2</div>
+  </div>
+
+  <h2>Example 2: Shrinking when space is limited</h2>
+  <div class="container container-shrink">
+    <div class="item" id="item1">Item 1<br>flex-basis: 200px<br>flex-grow: 1<br>flex-shrink: 1</div>
+    <div class="item" id="item2">Item 2<br>flex-basis: 200px<br>flex-grow: 2<br>flex-shrink: 1</div>
+    <div class="item" id="item3">Item 3<br>flex-basis: 200px<br>flex-grow: 1<br>flex-shrink: 2</div>
+  </div>
+</body>
+
+</html>

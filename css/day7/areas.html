@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            grid-template-areas: "myHeader myHeader myHeader myHeader myHeader myHeader myHeader myHeader myHeader myHeader"
+                "myAside myAside myAside mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
+                "myAside myAside myAside mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
+                "myAside myAside myAside mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
+                "myAside myAside myAside mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
+                "myAside myAside myAside mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
+                "myAside myAside myAside mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
+                "myAside myAside myAside mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
+                "myAside myAside myAside mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
+                "siteFooter siteFooter siteFooter siteFooter siteFooter siteFooter siteFooter siteFooter siteFooter siteFooter";
+
+            /* gap: 30px; */
+            min-height: 100vh;
+            background-color: yellow;
+        }
+
+        header {
+            grid-area: myHeader;
+            background-color: black;
+            color: white;
+        }
+
+        aside {
+            grid-area: myAside;
+            background-color: red;
+
+        }
+
+        main {
+            grid-area: mainContent;
+            background-color: white;
+        }
+
+        footer {
+            grid-area: siteFooter;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <main>Main Content</main>
+    <footer>Footer</footer>
+</body>
+
+</html>
