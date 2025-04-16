@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform-Origin Example</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            /* animation: rotate 4s infinite linear; */
+            transform-origin: 75% 20%;
+        }
+
+        /* Red dot to mark the transform-origin point (25% 75%) */
+        .origin-point {
+            width: 8px;
+            height: 8px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 20%;
+            /* Matches transform-origin Y */
+            left: 75%;
+            /* Matches transform-origin X */
+            transform: translate(-50%, -50%);
+            /* Center the dot */
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="square">
+            <div class="origin-point"></div>
+        </div>
+    </div>
+</body>
+
+</html>

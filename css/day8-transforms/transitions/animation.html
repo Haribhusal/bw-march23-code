@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            animation-name: moveRightAnimation;
+            animation-duration: 3s;
+            animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+            /* animation-delay: 2s; */
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        @keyframes moveRightAnimation {
+            from {
+                background-color: red;
+
+            }
+
+            to {
+                background-color: blue;
+                border-radius: 20%;
+                transform: translateX(300px) rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+</body>
+
+</html>

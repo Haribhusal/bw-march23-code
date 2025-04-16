@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube Rotation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            perspective: 300px;
+            /* Adds 3D perspective */
+        }
+
+        .cube {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .cube:hover {
+            transform: rotateX(-270deg);
+            /* Rotates around Y-axis on hover */
+        }
+
+        .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 128, 255, 0.6);
+            border: 1px solid #000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .front {
+            transform: translateZ(50px);
+        }
+
+        .back {
+            transform: translateZ(-50px) rotateY(180deg);
+        }
+
+        .right {
+            transform: translateX(50px) rotateY(90deg);
+        }
+
+        .left {
+            transform: translateX(-50px) rotateY(-90deg);
+        }
+
+        .top {
+            transform: translateY(-50px) rotateX(90deg);
+        }
+
+        .bottom {
+            transform: translateY(50px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cube">
+        <div class="face front">Front</div>
+        <div class="face back">Back</div>
+        <div class="face right">Right</div>
+        <div class="face left">Left</div>
+        <div class="face top">Top</div>
+        <div class="face bottom">Bottom</div>
+    </div>
+</body>
+
+</html>

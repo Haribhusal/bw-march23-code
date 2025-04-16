@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            transform: rotate(10deg);
+            transition: all 0.5s ease;
+            /* Default transform-origin is center */
+        }
+
+        .box-top-left:hover {
+            transform-origin: top left;
+            /* Set origin to top left corner */
+            transform: rotate(10deg);
+        }
+
+        .box-bottom-right:hover {
+            transform-origin: bottom right;
+            /* Set origin to bottom right corner */
+            transform: rotate(10deg);
+        }
+
+        .box-percentage:hover {
+            transform-origin: 25% 75%;
+            /* Set origin to 25% from the left and 75% from the top */
+            transform: rotate(10deg);
+        }
+
+        .box-length:hover {
+            transform-origin: 20px 30px;
+            /* Set origin to 20px from the left and 30px from the top */
+            transform: rotate(10deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+    <div class="box box-top-left"></div>
+    <div class="box box-bottom-right"></div>
+    <div class="box box-percentage"></div>
+    <div class="box box-length"></div>
+
+</body>
+
+</html>

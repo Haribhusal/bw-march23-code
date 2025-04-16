@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: yellow;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            /* Original color */
+            margin: 20px;
+            display: inline-block;
+            transition: transform 0.5s ease;
+            /* Smooth transition */
+        }
+
+        /* Different rotation effects on hover */
+        .rotate-45:hover {
+            transform: rotate(45deg);
+        }
+
+        .rotate-90:hover {
+            transform: rotate(90deg);
+        }
+
+        .rotate-180:hover {
+            transform: rotate(180deg);
+        }
+
+        .rotate-360:hover {
+            transform: rotate(360deg);
+        }
+
+        .rotate-3d:hover {
+            transform: rotate3d(1, 1, 1, 45deg);
+            /* 3D rotation */
+        }
+
+        .rotate-scale:hover {
+            transform: rotate(30deg) scale(1.2);
+            /* Rotate and scale */
+        }
+
+        .rotate-origin {
+            transform: rotate(180deg);
+            /* transform-origin: top left; */
+            /* Change the pivot point */
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>hello</p>
+    <div class="container">
+        <div class="box rotate-45"></div>
+        <div class="box rotate-90"></div>
+        <div class="box rotate-180"></div>
+        <div class="box rotate-360"></div>
+        <div class="box rotate-3d"></div>
+        <div class="box rotate-scale"></div>
+    </div>
+    <p>hello</p>
+
+
+
+</body>
+
+</html>
