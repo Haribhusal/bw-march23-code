@@ -1,0 +1,14 @@
+@mixin boxStyle($bgColor) {
+  @if $bgColor != "background-color" {
+    @error "Property #{$bgColor} must be background color.";
+  }
+  background-color: $bgColor;
+
+  
+}
+
+.box {
+  @include boxStyle(10px);
+  height: 100px;
+  width: 100px;
+}

@@ -1,0 +1,89 @@
+@import './variables';
+@import './example';
+// Partials 
+
+
+@mixin commonStyles($round, $bg) {
+    background-color: $bg;
+    border: none;
+    padding: 10px;
+    border-radius: $round;
+    color: white;
+}
+
+body {
+    font-size: $a;
+    // Here $a is varible which is decleared at ./_variables.scc file
+    // color: $a;
+    font-family: $font;
+    font-optical-sizing: auto;
+
+}
+
+button {
+    @include commonStyles(5px, red);
+    background-color: green;
+}
+
+h1 {
+    color: $brandColor;
+}
+
+h2 {
+    color: $brandColor;
+}
+
+h3 {
+    color: $brandColor;
+}
+
+
+header {
+    .test {
+        @include commonStyles(100px, black)
+    }
+
+    h1 {
+        color: orange !important;
+    }
+
+    nav {
+
+
+        .menu-items {
+            list-style: none;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            // Here we used nesting
+
+            li {
+                // background-color: green;
+
+                &:hover {
+                    background-color: orange;
+                }
+
+                a {
+                    background-color: orange;
+                    color: $brandColor;
+                    display: block;
+
+                }
+
+                // &:last-child {
+                //     a {
+                //         background-color: red;
+                //         color: white;
+                //     }
+                // }
+
+                // &:nth-child(3) {
+                //     background-color: orange;
+                // }
+            }
+        }
+
+    }
+}

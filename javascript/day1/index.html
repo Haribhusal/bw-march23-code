@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h1 id="heading" style="background-color: red;">Hello</h1>
+    <h1 id="heading2">Hello</h1>
+    <h1 id="heading3">Hello</h1>
+
+    <input id="myInput" type="password" placeholder="Enter password here">
+    <button onclick="showPassword()">Show Password</button>
+
+
+    <!-- <script src="./script.js"></script> -->
+
+    <script>
+
+
+        function showPassword() {
+            let myInputSelected = document.getElementById('myInput')
+
+            console.dir(myInputSelected)
+            myInputSelected.attributes[1].value = "text";
+            // myInputSelected.attributes[1]
+
+            let userInputValue = myInputSelected.value
+
+            let myElement = document.getElementById('heading')
+            myElement.innerText = userInputValue
+
+
+        }
+
+
+        let myInputSelected = document.getElementById('myInput')
+
+        console.dir(myInputSelected)
+        myInputSelected.attributes[1].value = "text";
+        // myInputSelected.attributes[1]
+
+        let userInputValue = myInputSelected.value
+
+        let myElement = document.getElementById('heading')
+        myElement.innerText = userInputValue
+
+
+
+        myElement.innerText = "Namaste"
+        myElement.style.backgroundColor = 'green'
+        myElement.style.color = "white"
+        myElement.style.fontSize = '100px'
+
+        // let my_ten_friends =  // snake casing
+        // let myTenFriends  = // Camel Casing
+        // MyTenFriends = // Pascal Casing
+
+        // let a = 10;
+        // let A = 20;
+
+
+        // let p = 1000, t = 2, r = 0.4;
+
+        // let result = p * t * r / 100
+
+        // console.log(result)
+
+    </script>
+</body>
+
+</html>

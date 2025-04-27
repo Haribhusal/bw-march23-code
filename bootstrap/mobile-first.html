@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      height: 100px;
+      background-color: red;
+      width: 90%;
+    }
+
+    @media screen and (min-width: 768px) {
+      .box {
+        background-color: green;
+      }
+
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      background-color: orange;
+      gap: 20px;
+
+    }
+
+
+    @media screen and (min-width: 768px) {
+      header {
+        flex-direction: row;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h3>Logo</h3>
+    <nav>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+    </nav>
+    <button>Login</button>
+  </header>
+  <div class="box"></div>
+
+</body>
+
+</html>

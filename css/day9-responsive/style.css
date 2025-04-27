@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+    background-color: yellow;
+}
+
+header {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: column; */
+
+}
+
+/* @media print {
+    header {
+        display: none;
+    }
+} */
+
+/* @media screen and (orientation:landscape) {
+    header {
+        background-color: red;
+    }
+
+} */
+
+header nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+    header {
+        flex-direction: column;
+
+
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+
+
+.banner {
+    height: 100vh;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* 
+.banner::before {
+    position: absolute;
+    height: 100%;
+
+} */
+.banner .overlay {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+}
+
+.banner .content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* background-color: red; */
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.work-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.work-section .works {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+@media screen and (max-width:768px) {
+    .work-section .works {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width:992px) and (min-width: 768px) {
+    .work-section .works {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+}
+
+.work-section .works .work {
+    background-color: white;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.1s ease-in;
+    gap: 20px;
+}
+
+.work-section .works .work:hover {
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px);
+}
+
+.work-section .works .work:hover h3 {
+    color: red;
+
+}

@@ -1,0 +1,11 @@
+:root {
+    --brandColor: #0097a7;
+}
+
+/* html {
+    --color: orange;
+} */
+
+body {
+    background-color: var(--brandColor);
+}

@@ -1,0 +1,83 @@
+/* This CSS will print because %message-shared is extended. */
+.message,
+p,
+.success,
+.error,
+.warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+
+body {
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+button {
+  background-color: red;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+}
+
+h1 {
+  color: green;
+}
+
+h2 {
+  color: green;
+}
+
+h3 {
+  color: green;
+}
+
+header .test {
+  background-color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+}
+
+header h1 {
+  color: orange !important;
+}
+
+header nav .menu-items {
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .menu-items li:hover {
+  background-color: orange;
+}
+
+header nav .menu-items li a {
+  background-color: orange;
+  color: green;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
