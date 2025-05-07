@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="demo"></div>
+    <script>
+
+        const person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+        // Create an Array
+        const myArray = Object.values(person);
+
+        console.log(typeof myArray)
+        // Display the Array
+        document.getElementById("demo").innerHTML = myArray;
+    </script>
+</body>
+
+</html>
