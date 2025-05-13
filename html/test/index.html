@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input name="uname" type="text">
+        <input name="lname" type="text">
+        <button>submit</button>
+    </form>
+
+    <script>
+        let form = document.querySelector('form')
+        // form.onsubmit = function (events) {
+        //     events.preventDefault();
+        //     console.log(events.target.value)
+        //     console.log('submitted')
+        // }
+
+        form.onsubmit = function (events) {
+            events.preventDefault();
+            // Create a FormData object from the form
+            const formData = new FormData(form);
+            // Log each input value
+            formData.forEach((value, key) => {
+                console.log(`${key}: ${value}`);
+            });
+            console.log('submitted');
+        }
+    </script>
+</body>
+
+</html>

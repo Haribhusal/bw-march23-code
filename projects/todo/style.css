@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 450px;
+}
+
+.content h1 {
+    font-size: 24px;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.content form input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.content form input:focus {
+    outline: none;
+    border-color: gray;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.content .list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content .list li {
+    display: flex;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.content .list button {
+    padding: 3px 7px;
+    border-radius: 4px;
+}
+
+.content .list p {
+    max-width: 250px;
+}

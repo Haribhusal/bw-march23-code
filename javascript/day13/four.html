@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>JavaScript Functions</h1>
+  <h2>Callback Functions</h2>
+
+  <p>The result of the calculation is:</p>
+  <p id="demo"></p>
+
+  <script>
+
+    function myDisplayer(something) {
+      document.getElementById("demo").innerHTML = something;
+    }
+
+    function myCalculator(num1, num2, callback) {
+      let sum = num1 + num2;
+      callback(sum);
+
+    }
+
+    myCalculator(5, 5, myDisplayer);
+
+    // function squareDisplayer(squares) {
+    //   document.getElementById("demo").innerHTML = squares.join(", ");
+    // }
+
+    // function processNumbers(numbers, callback) {
+    //   let squares = numbers.map(num => num * num);
+    //   callback(squares);
+    // }
+
+    // const numbersArray = [1, 2, 3, 4, 5];
+    // processNumbers(numbersArray, squareDisplayer);
+
+
+
+  </script>
+
+</body>
+
+</html>

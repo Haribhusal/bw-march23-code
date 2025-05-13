@@ -1,19 +1,27 @@
+// Learning Promises to fetch news data from server
+
+
 const API_URL = 'https://jsonplaceholder.typicode.com/posts';
 // GET
 
-async function fetchNews() {
-    try {
-        const response = await fetch(API_URL, {
-            method: "POST"
-        });
-        const data = await response.json();
-        console.log(data)
-
-        displayNews(data.slice(0, 3)); // Show only first 10 posts
-    } catch (error) {
-        document.getElementById('news-container').innerText = 'Failed to load news.';
-        console.error('Error fetching news:', error);
-    }
+function fetchNews() {
+    return new Promise((resolve, reject) => {
+        fetch(API_URL)
+            .then(response => {
+                if (!response.ok) {
+                    // If the response is not OK, reject the promise
+                    reject('Failed to fetch news: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                resolve(data.slice(0, 3)); // Resolve with the first 3 posts
+            })
+            .catch(error => {
+                reject('Error fetching news: ' + error);
+            });
+    });
 }
 
 function displayNews(newsItems) {
@@ -31,4 +39,10 @@ function displayNews(newsItems) {
     });
 }
 
-fetchNews();
+// Using the fetchNews function
+fetchNews()
+    .then(newsItems => displayNews(newsItems)) // Handle the resolved data
+    .catch(error => {
+        document.getElementById('news-container').innerText = 'Failed to load news.';
+        console.error(error); // Log the error
+    });
