@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="heading">my heading</h1>
+    <button>click me</button>
+    <nav>
+        <ul>
+
+            <li>
+                <a href="#">Link1</a>
+            </li>
+            <li>
+                <a href="#">Link2</a>
+            </li>
+            <li>
+                <a href="#">Link3</a>
+            </li>
+            <li>
+                <a href="#">Link4</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+    <script src="./jquery-3.7.1.js"></script>
+    <script>
+
+        // $(document).ready(function () {
+        // Jquery
+
+
+        // Kun element lai k garda, kun element k hune
+
+
+
+        // $('nav ul li a').dblclick(function () {
+        //     $(this).hide();
+        // })
+
+
+        $('#heading').hide();
+        // vanilla javascript
+        $('button').click(function () {
+            // $('#heading').show();
+            // $('#heading').slideToggle('slow');
+        })
+
+
+        let mybtn = document.querySelector('button');
+        mybtn.addEventListener('click', function () {
+            console.log('Button clicked')
+        })
+        // })
+
+
+    </script>
+</body>
+
+</html>

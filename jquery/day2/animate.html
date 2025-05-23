@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
+
+    <style>
+        .box {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            position: relative;
+
+        }
+
+        .imageSlider {
+            position: relative;
+        }
+
+        .imageSlider img {
+            max-height: 80vh;
+            object-fit: cover;
+        }
+
+        .imageSlider .owl-nav .owl-next {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 50px;
+            z-index: 99;
+            width: 50px;
+            background-color: red !important;
+            font-size: 20px !important;
+            border-radius: 50px;
+            color: white !important;
+        }
+
+        .imageSlider .owl-nav .owl-prev {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 50px;
+            z-index: 99;
+            width: 50px;
+            background-color: red !important;
+            font-size: 20px !important;
+            border-radius: 50px;
+            color: white !important;
+        }
+
+        .imageSlider .owl-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+
+
+        .imageSlider .owl-dots button {
+            background-color: red !important;
+            height: 30px;
+            width: 30px;
+            border-radius: 30px;
+        }
+
+
+        .imageSlider .owl-dots button.active {
+            background-color: green !important;
+        }
+
+        /* owl-nav */
+    </style>
+</head>
+
+<body>
+
+    <!-- Set up your HTML -->
+    <div class="imageSlider">
+
+        <div class="owl-carousel">
+            <div> <img src="https://picsum.photos/id/23/500/400" alt=""> </div>
+            <div> <img src="https://picsum.photos/id/24/500/400" alt=""> </div>
+            <div> <img src="https://picsum.photos/id/25/500/400" alt=""> </div>
+            <div> <img src="https://picsum.photos/id/26/500/400" alt=""> </div>
+            <div> <img src="https://picsum.photos/id/27/500/400" alt=""> </div>
+            <div> <img src="https://picsum.photos/id/28/500/400" alt=""> </div>
+            <div> <img src="https://picsum.photos/id/29/500/400" alt=""> </div>
+        </div>
+    </div>
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./owlcarousel/owl.carousel.min.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 3,
+                nav: true,
+                margin: 30,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    600: {
+                        items: 3,
+                        nav: false
+                    },
+                    1000: {
+                        items: 5,
+                        nav: true,
+                        loop: false
+                    }
+                }
+            });
+        });
+
+
+        // $(function () {
+        //     $("#datepicker").datepicker({
+        //         changeMonth: true,
+        //         changeYear: true
+        //     });
+        // });
+    </script>
+    <script>
+
+        // $(document).ready(function () {
+        // console.log("hello")
+
+        $('button').click(function () {
+            // $('.box').animate({
+            //     left: '250px',
+            //     height: '+=10px',
+            //     width: '+=10px'
+            // }, 4000, function () {
+            //     console.log("Animation is completed")
+            //     $('button').hide();
+            // })
+
+            $('.box').fadeToggle()
+        })
+        // }
+    </script>
+
+</body>
+
+</html>
