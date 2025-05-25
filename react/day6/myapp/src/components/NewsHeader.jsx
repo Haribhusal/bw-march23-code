@@ -44,18 +44,14 @@ export default function NewsHeader() {
                         <a href="#">
                             History
                         </a>
-                        <NavLink to="/services">
-                            Services
-                        </NavLink>
-                        <NavLink to="/about">
-                            About us
-                        </NavLink>
+
                         <NavLink to="/contact">
                             Contact
                         </NavLink>
                     </nav>
                 </div>
-                <div className="buttons flex gap-3">
+                <div className="buttons flex items-center gap-3">
+                    <NavLink to={'/dashboard'}>Dashboard</NavLink>
                     <button className="">
                         <Search />
                     </button>

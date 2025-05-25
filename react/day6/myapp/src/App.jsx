@@ -4,6 +4,8 @@ import Counter from './components/Counter';
 import News from './components/News'
 import NewsHeader from "./components/NewsHeader";
 import Ticker from './components/Ticker';
+import Cleanup from './components/CleanUp'
+import Timer from './components/Timer'
 
 export default function App() {
   const [news, setNews] = useState([])
@@ -22,7 +24,12 @@ export default function App() {
 
   return (
     <div className="">
+
+      {/* <Timer /> */}
+      {/* <Cleanup /> */}
+      {/* <Counter /> */}
       {/* <Counter />
+      
       <Ticker />
       <NewsHeader /> */}
       {/* <MyButton title="Read More" classes="bg-green-700" />

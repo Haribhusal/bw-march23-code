@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import AboutPage from './pages/AboutPage'
 import App from './App.jsx'
 import './index.css'
+import DashboardPage from './pages/DashboardPage.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -40,6 +41,10 @@ const ourRoutes = createBrowserRouter([
       {
         path: 'news-details/:id',
         element: <NewsDetails />
+      },
+      {
+        path: 'dashboard',
+        element: <DashboardPage />
       }
     ]
   },

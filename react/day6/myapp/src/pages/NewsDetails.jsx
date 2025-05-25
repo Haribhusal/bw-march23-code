@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import Loader from './../components/Loader'
-
+import Comments from './../components/Comments'
 const NewsDetails = () => {
     const [newsDetails, setNewsDetails] = useState({})
     const [loading, setLoading] = useState(false)
@@ -41,10 +41,7 @@ const NewsDetails = () => {
     // let params = useParams();
     // let id = params.id;
 
-
-
     if (loading) { return <Loader /> }
-
     return (
         <section>
             <div className="container max-w-7xl mx-auto">
@@ -56,6 +53,10 @@ const NewsDetails = () => {
                         {newsDetails.body}
                     </p>
                 </article>
+
+                <div className="">
+                    <Comments newsId={id} />
+                </div>
             </div>
         </section>
     )
